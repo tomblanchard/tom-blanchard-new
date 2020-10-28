@@ -25,7 +25,7 @@
 
                   {% unless template == 'index' %}
                     {% if link_handle == 'blog' %}
-                      {% assign link_url = '/' | append: link_handle | append: '.html' %}
+                      {% assign link_url = './' | append: link_handle | append: '.html' %}
                     {% endif %}
                   {% endunless %}
 
