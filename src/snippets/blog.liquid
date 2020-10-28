@@ -1,0 +1,57 @@
+{% assign article_title_all = 'Using cropped (1:1 - square) product images in Shopify themes, Fuel Made, Linjer, Blonded, Kinky Curly Yaki, Corganic, Caron Fiber Gear, PensXpress, PensXpress, PensXpress' | split: ', ' %}
+
+{% assign article_date_all = '19th February 2019, 19th February 2019, 19th February 2019, 19th February 2019, 19th February 2019, 19th February 2019, 19th February 2019, 19th February 2019, 19th February 2019, 19th February 2019' | split: ', ' %}
+
+{% assign article_content_all = 'I recently worked on a Shopify theme project where images uploaded to the products on this store were all quite large in height compared to their width, a grid of the products looks something like this. | I&apos;m primarily a front-end developer with good back-end knowledge, specializing in crafting solutions via the Shopify platform. Themes, apps, data migrations, custom API scripts and custom integrations are my bread-and-butter and I&apos;m happiest when I know I&apos;ve made a substantial impact on how a business operates. | I&apos;m primarily a front-end developer with good back-end knowledge, specializing in crafting solutions via the Shopify platform. Themes, apps, data migrations, custom API scripts and custom integrations are my bread-and-butter and I&apos;m happiest when I know I&apos;ve made a substantial impact on how a business operates. | I&apos;m primarily a front-end developer with good back-end knowledge, specializing in crafting solutions via the Shopify platform. Themes, apps, data migrations, custom API scripts and custom integrations are my bread-and-butter and I&apos;m happiest when I know I&apos;ve made a substantial impact on how a business operates. | I&apos;m primarily a front-end developer with good back-end knowledge, specializing in crafting solutions via the Shopify platform. Themes, apps, data migrations, custom API scripts and custom integrations are my bread-and-butter and I&apos;m happiest when I know I&apos;ve made a substantial impact on how a business operates. | I&apos;m primarily a front-end developer with good back-end knowledge, specializing in crafting solutions via the Shopify platform. Themes, apps, data migrations, custom API scripts and custom integrations are my bread-and-butter and I&apos;m happiest when I know I&apos;ve made a substantial impact on how a business operates. | I&apos;m primarily a front-end developer with good back-end knowledge, specializing in crafting solutions via the Shopify platform. Themes, apps, data migrations, custom API scripts and custom integrations are my bread-and-butter and I&apos;m happiest when I know I&apos;ve made a substantial impact on how a business operates. | I&apos;m primarily a front-end developer with good back-end knowledge, specializing in crafting solutions via the Shopify platform. Themes, apps, data migrations, custom API scripts and custom integrations are my bread-and-butter and I&apos;m happiest when I know I&apos;ve made a substantial impact on how a business operates. | I&apos;m primarily a front-end developer with good back-end knowledge, specializing in crafting solutions via the Shopify platform. Themes, apps, data migrations, custom API scripts and custom integrations are my bread-and-butter and I&apos;m happiest when I know I&apos;ve made a substantial impact on how a business operates. | I&apos;m primarily a front-end developer with good back-end knowledge, specializing in crafting solutions via the Shopify platform. Themes, apps, data migrations, custom API scripts and custom integrations are my bread-and-butter and I&apos;m happiest when I know I&apos;ve made a substantial impact on how a business operates.' | split: ' | ' %}
+
+<h1 class="invisible">
+  Blog
+</h1>
+
+<div class="padding-top-bottom--up-3 large--padding-top-bottom--up-7">
+  <div class="container-default">
+    <div class="overflow-hidden">
+      <div style="padding-right: 25px; padding-bottom: 25px;">
+        <ul class="flex--up-6 flex-wrap margin-bottom-negative--up-4 large--margin-bottom-negative--up-6 margin-bottom--none">
+          {% for article_title in article_title_all %}
+            {% assign article_date = article_date_all[forloop.index0] %}
+
+            {% assign article_content = article_content_all[forloop.index0] %}
+
+            <li class="flex-item-shrink flex padding-bottom--up-4 large--padding-bottom--up-6 one xlarge--one-two">
+              <article class="flex-item flex">
+                <div class="flex-item flex text-color-definitions-3" style="box-shadow: 25px 25px;">
+                  <div class="flex-item box-color-definitions-1 text-color-definitions-2">
+                    <div class="padding--up-3">
+                      <header class="margin-bottom--down-1 large--margin-bottom--up-1">
+                        <a class="text-color-inherit" href="/article.html">
+                          <div class="flex-vertical-reverse">
+                            <h2 class="font-size--up-6 line-height--up-10 large--font-size--up-10 large--line-height--up-14  text-color-definitions-3 margin-bottom--none">
+                              {{ article_title }}
+                            </h2>
+
+                            <div class="margin-bottom--down-1">
+                              <div class="font-size--0 large--font-size--up-4 large--line-height--up-10 text-color-definitions-4">
+                                <time datetime="2018-11-30">
+                                  {{ article_date }}
+                                </time>
+                              </div>
+                            </div>
+                          </div>
+                        </a>
+                      </header>
+
+                      <p class="font-size--down-2 line-height--up-4 large--font-size--0 large--line-height--up-6 margin-bottom--none">
+                        {{ article_content }}
+                      </p>
+                    </div>
+                  </div>
+                </div>
+              </article>
+            </li>
+          {% endfor %}
+        </ul>
+      </div>
+    </div>
+  </div>
+</div>

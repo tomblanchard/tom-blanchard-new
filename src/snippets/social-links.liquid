@@ -1,0 +1,18 @@
+{% assign social_network_names = 'linkedin, twitter, github' | split: ', ' %}
+
+{% assign social_network_urls = 'https://linkedin.com/in/tom-blanchard-7b906a163, https://twitter.com/tomblanchardCSS, http://github.com/tomblanchard' | split: ', ' %}
+
+<ul class="grid-bar--0 margin-bottom--none">
+  {% for social_network_name in social_network_names %}
+    {% assign social_network_url = social_network_urls[forloop.index0] %}
+
+    <li class="grid-item">
+      <a class="text-color-inherit" href="{{ social_network_url }}" target="_blank">
+        <div class="font-size--up-8">
+          {% assign snippet = 'svg-' | append: social_network_name %}
+          {% include snippet %}
+        </div>
+      </a>
+    </li>
+  {% endfor %}
+</ul>

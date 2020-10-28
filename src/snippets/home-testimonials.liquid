@@ -1,0 +1,192 @@
+{% assign empty_array = '' | split: '' %}
+
+{% assign image_url_1 = '/assets/ryan-foster.jpg' | sort %}
+{% assign image_url_2 = '/assets/joe-dempsey.jpg' | sort %}
+{% assign image_url_3 = '/assets/carson-mccomas.jpg' | sort %}
+{% assign image_url_4 = '/assets/arianne-foulks.jpg' | sort %}
+{% assign image_url_5 = '/assets/max-rolon.jpg' | sort %}
+{% assign image_url_6 = '/assets/gareth-watson.jpg' | sort %}
+{% assign image_url_7 = '/assets/daria-rose.jpg' | sort %}
+
+{% assign link_1 = 'https://fostr.io' | sort %}
+{% assign link_2 = 'https://liquify.design' | sort %}
+{% assign link_3 = 'https://fuelmade.com' | sort %}
+{% assign link_4 = 'https://aeolidia.com' | sort %}
+{% assign link_5 = 'https://barrelny.com' | sort %}
+{% assign link_6 = 'https://makeitrane.com' | sort %}
+{% assign link_7 = 'https://tvp.nyc' | sort %}
+
+{% assign name_1 = 'Ryan Foster' | sort %}
+{% assign name_2 = 'Joe Dempsey' | sort %}
+{% assign name_3 = 'Carson McComas' | sort %}
+{% assign name_4 = 'Arianne Foulks' | sort %}
+{% assign name_5 = 'Max Rolon' | sort %}
+{% assign name_6 = 'Gareth Watson' | sort %}
+{% assign name_7 = 'Daria Rose' | sort %}
+
+{% assign role_1 = 'Founder at Fostr' | sort %}
+{% assign role_2 = 'Founder at Liquify' | sort %}
+{% assign role_3 = 'CEO at Fuel Made' | sort %}
+{% assign role_4 = 'Founder at Aeolidia' | sort %}
+{% assign role_5 = 'Senior Developer at Barrel' | sort %}
+{% assign role_6 = 'Web Developer at RANE' | sort %}
+{% assign role_7 = 'Director at TVP NYC' | sort %}
+
+{% assign copy_1 = 'Tom is a very capable full stack developer with a great deal of experience working within the Shopify eco-system.' | sort %}
+{% assign copy_2 = 'Tom is simply the best Shopify developer I&apos;ve worked with - he&apos;s working at the highest level of Shopify development. 100% recommended.' | sort %}
+{% assign copy_3 = 'I worked closely with Tom for a few years and can say that he is one of the most talented developers I&apos;ve ever worked with, and knows Shopify as well as anyone.' | sort %}
+{% assign copy_4 = 'Tom has been a huge help in providing speedy and thoughtful feature solutions for our Shopify clients.' | sort %}
+{% assign copy_5 = 'Tom was a pleasure to work with. He is diligent with a strong commitment to quality, tested work.' | sort %}
+{% assign copy_6 = 'I really cannot recommend Tom enough for his expertise in relation to Shopify and on how approachable he was.' | sort %}
+{% assign copy_7 = 'Tom is really great to work with! He is super speedy and really thinks outside of the box when it comes to developing within Shopify.' | sort %}
+
+{%
+  assign image_url_all = empty_array |
+    concat: image_url_1 |
+    concat: image_url_2 |
+    concat: image_url_3 |
+    concat: image_url_4 |
+    concat: image_url_5 |
+    concat: image_url_6 |
+    concat: image_url_7
+%}
+
+{%
+  assign link_all = empty_array |
+    concat: link_1 |
+    concat: link_2 |
+    concat: link_3 |
+    concat: link_4 |
+    concat: link_5 |
+    concat: link_6 |
+    concat: link_7
+%}
+
+{%
+  assign name_all = empty_array |
+    concat: name_1 |
+    concat: name_2 |
+    concat: name_3 |
+    concat: name_4 |
+    concat: name_5 |
+    concat: name_6 |
+    concat: name_7
+%}
+
+{%
+  assign role_all = empty_array |
+    concat: role_1 |
+    concat: role_2 |
+    concat: role_3 |
+    concat: role_4 |
+    concat: role_5 |
+    concat: role_6 |
+    concat: role_7
+%}
+
+{%
+  assign copy_all = empty_array |
+    concat: copy_1 |
+    concat: copy_2 |
+    concat: copy_3 |
+    concat: copy_4 |
+    concat: copy_5 |
+    concat: copy_6 |
+    concat: copy_7
+%}
+
+<section class="box-color-definitions-1 text-color-definitions-2" id="testimonials">
+  <div class="padding-top-bottom--up-3 large--padding-top-bottom--up-7">
+    <div class="container-default">
+      <div class="large--flex--up-4">
+        <div class="large--flex-item">
+          <div class="large--flex-bar large--position-sticky large--position-top large--height-full-vh">
+            <div class="flex-item">
+              <div class="font-size--down-2 line-height--up-4 large--font-size--0 large--line-height--up-6">
+                <h2 class="text-color-inherit font-stack-base text-caps font-weight-700 font-size--0 large--font-size--up-4 line-height--none margin-bottom--down-2 large--margin-bottom--up-1" style="color: #65102B;">
+                  TESTIMONIALS
+                </h2>
+
+                <h3 class="text-color-inherit font-size--up-10 line-height--up-14 large--font-size--up-17 large--line-height--up-20 margin-bottom--0 large--margin-bottom--up-1">
+                  See what my clients have to say
+                </h3>
+
+                <p class="font-size--inherit line-height--inherit margin-bottom--none">
+                  I take pride in saying that I work with some of the best Shopify agencies out there - I've lead development teams, consulted on complex technical solutions and launched a few of the largest stores on the Shopify platform. Don't just take my word for it, take a look at what my clients have to say about me.
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="xlarge--flex-item-shrink xlarge--nine-sixteen">
+          <ul class="margin-bottom--none last-child-margin--none">
+            {% for image_url in image_url_all %}
+              {% assign link = link_all[forloop.index0] %}
+
+              {% assign name = name_all[forloop.index0] %}
+
+              {% assign role = role_all[forloop.index0] %}
+
+              {% assign copy = copy_all[forloop.index0] %}
+
+              {% assign image_alt = name | append: ', ' | append: role %}
+
+              {% assign hide_mobile = false %}
+
+              {% if forloop.index > 3 %}
+                {% assign hide_mobile = true %}
+              {% endif %}
+
+              <li class="margin-bottom--up-2 {% if hide_mobile %}hide large--show{% endif %}">
+                <div class="border-definitions-4">
+                  <div class="padding--up-3 xlarge--padding-left-right--up-5">
+                    <div class="font-size--down-2 line-height--up-4 large--font-size--0 large--line-height--up-6">
+                      <div class="xlarge--flex-bar--up-3">
+                        <div class="xlarge--flex-item-shrink one-two medium--three-ten box-center">
+                          <a href="{{ link }}" target="_blank">
+                            <div class="margin-bottom--up-2 xlarge--margin-bottom--none">
+                              <div style="filter: grayscale(1);">
+                                <div class="image-container">
+                                  <img class="border-radius-full" src="{{ image_url }}" alt="{{ image_alt | escape }}" />
+                                </div>
+                              </div>
+                            </div>
+                          </a>
+                        </div>
+
+                        <div class="xlarge--flex-item">
+                          <div class="text-center xlarge--text-left">
+                            <blockquote class="font-size--inherit line-height--inherit flex-vertical-reverse margin-bottom--none">
+                              <p class="font-size--inherit line-height--inherit margin-bottom--none">
+                                {{ copy }}
+                              </p>
+
+                              <footer class="margin-bottom--down-1">
+                                <cite style="font-style: inherit;">
+                                  <a class="text-color-inherit" href="{{ link }}" target="_blank">
+                                    <span class="block font-stack-heading font-size--up-6 line-height--up-10 large--font-size--up-10 large--line-height--up-14 margin-bottom--down-4">
+                                      {{ name }}
+                                    </span>
+
+                                    <span class="block font-stack-heading large--font-size--0 large--line-height--up-6">
+                                      {{ role }}
+                                    </span>
+                                  </a>
+                                </cite>
+                              </footer>
+                            </blockquote>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </li>
+            {% endfor %}
+          </ul>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>

@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta http-equiv="x-ua-compatible" content="ie=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <title>
+      Freelance full-stack Shopify development - Lincolnshire, UK | Tom Blanchard
+    </title>
+
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,400;0,600;0,700;1,400;1,600;1,700&family=Alfa+Slab+One&display=swap" />
+    <link rel="stylesheet" href="/assets/theme.min.css" />
+
+    {% if template == 'article' %}
+      <link rel="stylesheet" href="https://tomblanchard.co.uk/assets/prism-okaidia.min.css?v=8bd22fdfeb" />
+    {% endif %}
+  </head>
+
+  <body>
+    {% include 'header' %}
+
+    <main>
+      {% block content_for_layout %}{% endblock %}
+    </main>
+
+    {% include 'footer' %}
+
+    {% if template == 'article' %}
+      <script src="https://tomblanchard.co.uk/assets/prism.min.js?v=8bd22fdfeb"></script>
+    {% endif %}
+  </body>
+</html>
